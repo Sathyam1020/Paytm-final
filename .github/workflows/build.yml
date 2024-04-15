@@ -1,4 +1,4 @@
-name: Build Succeeds on PR
+name: Build on PR
 
 on:
   pull_request:
@@ -7,12 +7,11 @@ on:
 
 jobs:
   build:
-    name: Build runs the project
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js
-        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
 
@@ -23,4 +22,4 @@ jobs:
         run: npm run db:generate
 
       - name: Run Build
-        run: npm build
+        run: npm run build
