@@ -5,6 +5,7 @@ import {Card} from "@repo/ui/card";
 
 async function getTransactionHistory() {
     const session = await getServerSession(authOptions);
+    console.log(session.user);
 
     const transactions = await prisma.p2pTransfer.findMany({
         where: {

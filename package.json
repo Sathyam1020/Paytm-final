@@ -22,5 +22,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@next/swc-darwin-arm64": "^14.2.5"
+  }
 }
